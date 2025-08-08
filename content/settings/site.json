@@ -1,0 +1,14 @@
+{
+  "siteTitle": "Tricia Arden Caldwell",
+  "siteDescription": "A modern, content-driven Next.js starter with Decap CMS and Cloudflare.",
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    { "label": "Blog", "href": "/blog" }
+  ],
+  "social": {
+    "twitter": "",
+    "github": "",
+    "linkedin": ""
+  }
+}
