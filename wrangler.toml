@@ -1,0 +1,6 @@
+name = "triciaardencaldwell"
+compatibility_date = "2024-08-08"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "triciaardencaldwell"
