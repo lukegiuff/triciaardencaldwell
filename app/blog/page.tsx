@@ -1,27 +1,20 @@
-import Link from 'next/link';
-import { getAllPosts } from '@/lib/content';
-import AnimatedFadeIn from '@/components/AnimatedFadeIn';
+import Container from '@/components/Container';
 
 export const dynamic = 'error';
 
 export default async function BlogIndex() {
-  const posts = getAllPosts();
   return (
     <main className="mx-auto max-w-4xl px-6 py-16">
-      <h1 className="text-4xl font-bold tracking-tight mb-8">Blog</h1>
-      <ul className="space-y-6">
-        {posts.map((post) => (
-          <AnimatedFadeIn key={post.slug}>
-            <li className="group">
-              <Link href={`/blog/${post.slug}`} className="block rounded-lg border border-black/5 p-5 hover:border-black/10 transition-colors">
-                <h2 className="text-xl font-semibold group-hover:text-blue-600 transition-colors">{post.title}</h2>
-                <p className="text-sm text-gray-600 mt-1">{new Date(post.date).toLocaleDateString()}</p>
-                {post.summary && <p className="mt-2 text-gray-700">{post.summary}</p>}
-              </Link>
-            </li>
-          </AnimatedFadeIn>
-        ))}
-      </ul>
+      <Container>
+        <h1 className="text-4xl font-bold tracking-tight mb-8">Blog</h1>
+        <div className="text-center py-16">
+          <p className="text-xl text-gray-600 mb-4">Blog Coming Soon</p>
+          <p className="text-gray-500">
+            We&apos;re working on bringing you insightful articles and updates. 
+            Check back soon for content about music, composition, and theatrical productions.
+          </p>
+        </div>
+      </Container>
     </main>
   );
 }
