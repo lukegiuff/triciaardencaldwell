@@ -30,7 +30,7 @@ export default function MusicPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Music className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Children's Songs</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Children&apos;s Songs</h3>
                 <p className="text-gray-600 text-sm">Delightful compositions crafted for young audiences</p>
               </div>
 
@@ -58,7 +58,7 @@ export default function MusicPage() {
               </div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Audio Samples Coming Soon</h2>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                We're preparing high-quality audio samples from Tricia's diverse musical portfolio. 
+                We&apos;re preparing high-quality audio samples from Tricia&apos;s diverse musical portfolio. 
                 Check back soon to experience the range and creativity of her compositions.
               </p>
               <div className="inline-flex items-center gap-2 text-sm font-medium text-amber-700 bg-amber-50 px-4 py-2 rounded-full">

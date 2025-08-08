@@ -1,8 +1,6 @@
 "use client";
 
 import Container from '@/components/Container';
-import Section from '@/components/Section';
-
 import CastGrid from '@/components/CastGrid';
 import { motion } from 'framer-motion';
 import Image from 'next/image';

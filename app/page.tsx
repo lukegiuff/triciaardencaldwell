@@ -8,9 +8,9 @@ import AudioCard from '@/components/AudioCard';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { about, wakeUp, scl, miscMusic } from '@/data/tricia';
+import { wakeUp, scl, miscMusic } from '@/data/tricia';
 import { asset } from '@/utils/asset';
-import { ArrowRight, Calendar, Music } from 'lucide-react';
+import { Calendar, Music } from 'lucide-react';
 
 export default function HomePage() {
   return (
