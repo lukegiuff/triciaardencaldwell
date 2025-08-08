@@ -1,19 +1,14 @@
-import Container from '@/components/Container';
+import { notFound } from 'next/navigation';
 
-export const runtime = 'edge';
+export const dynamic = 'error';
 
-export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  
-  return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
-      <Container>
-        <h1 className="text-4xl font-bold tracking-tight mb-2">Blog Post: {slug}</h1>
-        <p className="text-sm text-gray-600 mb-6">Coming soon</p>
-        <article className="prose prose-slate max-w-none">
-          <p>Blog functionality is being developed. Check back soon for updates and articles.</p>
-        </article>
-      </Container>
-    </main>
-  );
+export async function generateStaticParams() {
+  // Return empty array to generate no static routes
+  // This forces any dynamic route to go to 404
+  return [];
+}
+
+export default async function BlogPost() {
+  // Always return not found for any dynamic route
+  return notFound();
 }

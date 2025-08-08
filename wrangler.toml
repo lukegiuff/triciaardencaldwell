@@ -1,6 +1,6 @@
 name = "triciaardencaldwell"
-compatibility_date = "2024-08-08"
-compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+compatibility_date = "2024-09-23"
 
 [env.production]
 name = "triciaardencaldwell"
