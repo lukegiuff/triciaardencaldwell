@@ -37,7 +37,7 @@ export const wakeUp: {
   ],
   video: {
     youtubeId: "",
-    fallbackSrc: "wakeup/Remember Me-2.MOV",
+    fallbackSrc: "",
     poster: "wakeup/WAKEUP.3.jpg",
     title: "Remember Me (excerpt) - WAKE UP",
     credit: "Musical Arrangements by Jean-Philippe Côté",
