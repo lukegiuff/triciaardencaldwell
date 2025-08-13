@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <main className="pt-24">
       <Container>
-        <div className="py-16 lg:py-24">
+        <div className="pt-16 lg:pt-24 pb-8 lg:pb-12">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
@@ -35,19 +35,11 @@ export default function AboutPage() {
 
             {/* Biography */}
             <div className="lg:col-span-3">
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg max-w-none [&>div]:mb-0">
                 <div 
-                  className="text-gray-700 leading-relaxed space-y-6" 
+                  className="biography-content" 
                   dangerouslySetInnerHTML={{ __html: about.html }} 
                 />
-              </div>
-              
-              {/* Coming Soon Notice */}
-              <div className="mt-12 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Full Biography</h3>
-                <p className="text-gray-600">
-                  A comprehensive biography with career highlights, achievements, and personal insights coming soon.
-                </p>
               </div>
             </div>
           </div>

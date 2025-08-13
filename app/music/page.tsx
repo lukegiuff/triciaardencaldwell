@@ -24,30 +24,22 @@ export default function MusicPage() {
 
           {/* Coming Soon Content */}
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 gap-12 mb-16 max-w-4xl mx-auto">
               {/* Music Categories Preview */}
-              <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Music className="w-8 h-8 text-blue-600" />
+              <div className="text-center p-12 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm">
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                  <Music className="w-12 h-12 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Children&apos;s Songs</h3>
-                <p className="text-gray-600 text-sm">Delightful compositions crafted for young audiences</p>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Children&apos;s Songs</h3>
+                <p className="text-gray-600 text-base">Delightful compositions crafted for young audiences</p>
               </div>
 
-              <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Volume2 className="w-8 h-8 text-red-600" />
+              <div className="text-center p-12 bg-gray-50 rounded-3xl border border-gray-100 shadow-sm">
+                <div className="w-24 h-24 bg-gradient-to-br from-red-100 to-red-200 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                  <Volume2 className="w-12 h-12 text-red-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Christmas Collection</h3>
-                <p className="text-gray-600 text-sm">Seasonal music bringing warmth and joy</p>
-              </div>
-
-              <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Original Compositions</h3>
-                <p className="text-gray-600 text-sm">Unique pieces showcasing creative versatility</p>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Christmas Collection</h3>
+                <p className="text-gray-600 text-base">Seasonal music bringing warmth and joy</p>
               </div>
             </div>
 

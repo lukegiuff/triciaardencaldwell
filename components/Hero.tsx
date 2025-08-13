@@ -5,7 +5,6 @@ import Container from './Container';
 import Link from 'next/link';
 import Image from 'next/image';
 import { asset } from '@/utils/asset';
-import { about } from '@/data/tricia';
 import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
@@ -62,14 +61,6 @@ export default function Hero() {
             </motion.p>
             
             <motion.div
-              className="prose prose-lg mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.25 }}
-              dangerouslySetInnerHTML={{ __html: about.html }}
-            />
-            
-            <motion.div
               className="flex flex-col sm:flex-row gap-4 lg:gap-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -107,7 +98,7 @@ export default function Hero() {
           >
             <div className="relative aspect-[4/5] w-full max-w-sm lg:max-w-md overflow-hidden rounded-3xl shadow-elegant-lg">
               <Image 
-                src={asset(about.image)} 
+                src={asset('bio/C0A4BB18-2906-4342-8409-D9E0F70F2CBB.jpeg')} 
                 alt="Tricia Arden Caldwell portrait" 
                 fill 
                 className="object-cover" 

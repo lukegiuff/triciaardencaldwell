@@ -22,7 +22,7 @@ export default function Nav() {
   const navLinks = [
     { href: '/about', label: 'About' },
     { href: '/wake-up', label: 'WAKE UP' },
-    { href: '/soul-crushing-love', label: 'Soul Crushing Love' },
+    { href: '/soul-crushing-love', label: 'soul crushing love' },
     { href: '/music', label: 'Music' },
   ];
 

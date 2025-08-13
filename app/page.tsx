@@ -83,7 +83,7 @@ export default function HomePage() {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={asset('scl/May.jpg')}
-                      alt="Soul Crushing Love"
+                      alt="soul crushing love"
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 1024px) 100vw, 50vw"
@@ -134,10 +134,9 @@ export default function HomePage() {
               <p className="text-xl text-gray-600">{miscMusic.blurb}</p>
             </motion.div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6">
             <AudioCard title="Children's Songs" />
             <AudioCard title="Christmas Collection" />
-            <AudioCard title="Original Compositions" />
           </div>
         </Section>
       </Container>

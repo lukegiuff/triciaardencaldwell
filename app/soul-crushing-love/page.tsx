@@ -2,11 +2,13 @@
 
 import Container from '@/components/Container';
 import CastGrid from '@/components/CastGrid';
+import MasonryGallery from '@/components/MasonryGallery';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { scl } from '@/data/tricia';
 import { asset } from '@/utils/asset';
+import { formatSynopsis } from '@/utils/formatText';
 import { Calendar, MapPin, Users } from 'lucide-react';
 
 export const dynamic = 'error';
@@ -39,7 +41,7 @@ export default function SclPage() {
               <div className="mb-6">
                 <Image
                   src={asset('scl/Logo.png')}
-                  alt="Soul Crushing Love Logo"
+                  alt="soul crushing love Logo"
                   width={400}
                   height={200}
                   className="w-full max-w-md h-auto"
@@ -58,7 +60,7 @@ export default function SclPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="w-6 h-6 text-white/80 flex-shrink-0" />
-                  <span className="text-white/90 font-medium">West Gate Theatre</span>
+                  <span className="text-white/90 font-medium">{scl.venue}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Users className="w-6 h-6 text-white/80 flex-shrink-0" />
@@ -140,7 +142,7 @@ export default function SclPage() {
               </h2>
               <div className="prose prose-xl max-w-none">
                 <p className="whitespace-pre-line text-gray-700 leading-relaxed text-center">
-                  {scl.synopsis}
+                  {formatSynopsis(scl.synopsis)}
                 </p>
               </div>
             </motion.div>
@@ -211,6 +213,84 @@ export default function SclPage() {
           </div>
         </Container>
       </div>
+
+      {/* Song List */}
+      <div className="bg-gray-50 py-16">
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-light text-gray-900 mb-4">
+              Musical <span className="text-gradient font-semibold">Numbers</span>
+            </h2>
+            <p className="text-xl text-gray-600">The complete song list featuring all characters</p>
+          </motion.div>
+          
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="overflow-hidden rounded-3xl shadow-elegant-lg bg-white"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-900 text-white">
+                    <tr>
+                      <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">#</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">Song Title</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">Characters</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {scl.songs.map((song, index) => (
+                      <motion.tr
+                        key={song.title}
+                        className="hover:bg-gray-50 transition-colors"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index * 0.02 }}
+                      >
+                        <td className="px-6 py-4 text-sm font-medium text-gray-900">{index + 1}</td>
+                        <td className="px-6 py-4">
+                          <div className="text-lg font-medium text-gray-900">{song.title}</div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="text-sm text-gray-600">{song.characters}</div>
+                        </td>
+                      </motion.tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </div>
+
+      {/* Production Gallery */}
+      <Container className="py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-light text-gray-900 mb-4">
+            Production <span className="text-gradient font-semibold">Gallery</span>
+          </h2>
+          <p className="text-xl text-gray-600 mb-2">Behind the scenes and performance highlights</p>
+          <p className="text-gray-500 italic">Photography by: Leeça St Aubin</p>
+        </motion.div>
+        <MasonryGallery images={scl.gallery} />
+      </Container>
 
       {/* Final CTA */}
       <div className="bg-gray-50 py-16">

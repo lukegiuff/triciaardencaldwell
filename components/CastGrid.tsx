@@ -56,6 +56,44 @@ export default function CastGrid({ cast }: { cast: CastMember[] }) {
           </div>
         </motion.div>
       ))}
+      
+      {/* Enjoy the Show Box */}
+      <motion.div 
+        className="group relative overflow-hidden rounded-2xl shadow-elegant hover:shadow-elegant-lg transition-all duration-500"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: cast.length * 0.05 }}
+        whileHover={{ y: -4 }}
+      >
+        <div className="relative aspect-[3/4] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
+          <Image
+            src={asset('scl/Logo.png')}
+            alt="soul crushing love logo"
+            width={120}
+            height={60}
+            className="opacity-80 group-hover:opacity-100 transition-opacity duration-300 mb-4"
+          />
+          
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+          
+          {/* Content */}
+          <div className="absolute inset-0 flex flex-col justify-end p-6">
+            <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 text-center">
+              <div className="text-xs uppercase tracking-wider text-white/80 font-medium mb-1">
+                September 18-27
+              </div>
+              <div className="text-lg font-semibold text-white leading-tight">
+                Enjoy the Show
+              </div>
+            </div>
+          </div>
+          
+          {/* Hover border */}
+          <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/20 transition-colors duration-300 rounded-2xl" />
+        </div>
+      </motion.div>
     </div>
   );
 }
